@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ashish Tummurugoti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nav:#243553; --nav-ink:#ffffff;
+  --bg:#f7f8fa; --ink:#1c2433; --muted:#5a6477; --line:#d9dee7; --card:#ffffff; --accent:#243553;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#141c2b;--ink:#e8ecf3;--muted:#9aa5ba;--line:#2c3a54;--card:#1b2538;--accent:#a9bde6}
+}
+:root[data-theme="dark"]{--bg:#141c2b;--ink:#e8ecf3;--muted:#9aa5ba;--line:#2c3a54;--card:#1b2538;--accent:#a9bde6}
+html{scroll-behavior:smooth;scroll-padding-top:calc(90px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Libre Baskerville',Georgia,'Times New Roman',serif;line-height:1.75;font-size:17px}
+header{position:sticky;top:0;z-index:10;background:var(--nav);color:var(--nav-ink);padding:calc(1.1rem + env(safe-area-inset-top,0px)) 3rem 1.1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem 2rem}
+header .name{font-size:1.05rem;color:var(--nav-ink);text-decoration:none}
+nav{display:flex;gap:2.2rem;flex-wrap:wrap}
+nav a{color:var(--nav-ink);text-decoration:none;font-size:1.05rem;padding-bottom:1px;border-bottom:1px solid transparent}
+nav a:hover,nav a.active{border-bottom-color:var(--nav-ink)}
+a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+main a:focus-visible{outline-color:var(--accent)}
+section{max-width:860px;margin:0 auto;padding:5rem 1.5rem 1rem}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.15;margin:0 0 1.2rem;font-weight:700}
+h2{font-size:1.9rem;margin:0 0 1.6rem;font-weight:700}
+h3{font-size:1.15rem;margin:0 0 .2rem}
+p{margin:0 0 1rem;max-width:68ch}
+.lead{font-size:1.15rem;color:var(--muted);font-style:italic}
+.btns{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}
+.btn{display:inline-block;padding:.65rem 1.3rem;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-size:1rem}
+.btn.fill{background:var(--nav);color:#fff;border-color:var(--nav)}
+.item{padding:1.4rem 0;border-top:1px solid var(--line)}
+.item:last-child{border-bottom:1px solid var(--line)}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:.5rem}
+.tags{color:var(--muted);font-size:.9rem}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact a{color:var(--accent)}
+section.hero{max-width:none;padding:0;scroll-margin-top:0}
+section.page{display:none}
+section.page.active{display:block}
+main{min-height:60vh}
+.hero-img{min-height:min(72vh,680px);padding:5.5rem 1.5rem 3rem;text-align:center;background:linear-gradient(rgba(255,255,255,.42),rgba(255,255,255,.42)),linear-gradient(to bottom,#b9d8f5 0%,#d6e8f8 36%,#9cc3dc 40%,#5f9fc0 60%,#9db873 61%,#7fa355 80%,#6f9248 100%)}
+.hero-img h1{font-size:clamp(1.3rem,2.6vw,1.8rem);line-height:1.3;max-width:760px;margin:0 auto 2.2rem;color:#243553}
+.hero-img p{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:.95rem;line-height:1.6;max-width:720px;margin:0 auto 1rem;color:#1c2433}
+.band{height:84px;background:#e0e2dd}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .band{background:#1b2538}}
+:root[data-theme="dark"] .band{background:#1b2538}
+footer{margin-top:4rem;background:var(--nav);color:#fff;padding:2.5rem 1.5rem calc(2.5rem + env(safe-area-inset-bottom,0px))}
+.foot{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem 2rem}
+.foot .fname{font-size:1.8rem}
+.foot .fcontact{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:.85rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.foot a{color:#fff;text-decoration:none;border-bottom:1px solid transparent}
+.foot a:hover{border-bottom-color:#fff}
+@media (max-width:760px){
+  header{padding-left:1.25rem;padding-right:1.25rem}
+  nav{gap:1.1rem}nav a{font-size:1rem}
+  .cols{grid-template-columns:1fr;gap:0}
+  section{padding-top:3.5rem}
+  section.hero{padding-top:0}
+  .hero-img{padding-top:3.5rem}
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="name" href="#home">Ashish Tummurugoti</a>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education &amp; Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero page active">
+  <div class="hero-img">
+    <h1>[Your current role] | [Specialty one] | [Specialty two] | [Specialty three]</h1>
+    <p>I am a <strong>[your role or degree]</strong> at <strong>[your university or company]</strong>, focused on [your main areas]. My experience combines [hands-on work] with [key tools and skills].</p>
+    <p>I am currently building experience in <strong>[focus area one]</strong> and <strong>[focus area two]</strong> while working toward [the role you want next].</p>
+  </div>
+  <div class="band"></div>
+</section>
+
+<section id="projects" class="page">
+  <h2>Projects</h2>
+  <div class="item">
+    <h3>Project one</h3>
+    <div class="meta">[Year] · [Your role]</div>
+    <p>[What you built, the problem it solved, and the result. Add numbers if you have them.]</p>
+    <div class="tags">[Tools used, e.g. Python, React, SQL]</div>
+  </div>
+  <div class="item">
+    <h3>Project two</h3>
+    <div class="meta">[Year] · [Your role]</div>
+    <p>[What you built, the problem it solved, and the result.]</p>
+    <div class="tags">[Tools used]</div>
+  </div>
+  <div class="item">
+    <h3>Project three</h3>
+    <div class="meta">[Year] · [Your role]</div>
+    <p>[What you built, the problem it solved, and the result.]</p>
+    <div class="tags">[Tools used]</div>
+  </div>
+</section>
+
+<section id="education" class="page">
+  <h2>Education &amp; Experience</h2>
+  <div class="cols">
+    <div>
+      <h3 style="margin-bottom:1rem">Education</h3>
+      <div class="item">
+        <h3>[Degree, Major]</h3>
+        <div class="meta">[University] · [Start year] to [End year]</div>
+        <p>[Honors, GPA, or relevant coursework.]</p>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin-bottom:1rem">Experience</h3>
+      <div class="item">
+        <h3>[Job title]</h3>
+        <div class="meta">[Company] · [Start] to [End]</div>
+        <p>[One or two lines on what you did and achieved.]</p>
+      </div>
+      <div class="item">
+        <h3>[Job title]</h3>
+        <div class="meta">[Company] · [Start] to [End]</div>
+        <p>[One or two lines on what you did and achieved.]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact page">
+  <h2>Contact</h2>
+  <p>I'm open to new opportunities. The best way to reach me is by email.</p>
+  <p>Email: <a href="mailto:you@example.com">you@example.com</a><br>
+  LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">linkedin.com/in/your-profile</a></p>
+</section>
+</main>
+
+<footer>
+  <div class="foot">
+    <div class="fname">Ashish Tummurugoti</div>
+    <div class="fcontact">
+      <span>[Phone number]</span><span>|</span>
+      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="LinkedIn"><strong>in</strong></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('nav a'));
+  var pages=[].slice.call(document.querySelectorAll('section.page'));
+  var ids=pages.map(function(p){return p.id});
+  function show(){
+    var id=(location.hash||'#home').slice(1);
+    if(ids.indexOf(id)<0)id='home';
+    pages.forEach(function(p){p.classList.toggle('active',p.id===id)});
+    links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+id)});
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',show);show();
+})();
+</script>
+</body>
+</html>
